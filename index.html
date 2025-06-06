@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PyFlix</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      color: #00ffc8;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .video-card {
+      background-color: #222;
+      border-radius: 12px;
+      padding: 15px;
+      width: 320px;
+      box-shadow: 0 0 10px #00ffc8aa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+      color: #00ffc8;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      outline: none;
+      background: black;
+    }
+    @media (max-width: 680px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .video-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>PyFlix</header>
+  <main>
+    <div class="video-card">
+      <h3>Sample Video from Pixeldrain</h3>
+      <video controls preload="metadata" poster="">
+        <source src="https://pixeldrain.com/api/file/YOUR_PIXELDRAIN_ID" type="video/mp4" />
+        Sorry, your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <div class="video-card">
+      <h3>Sample Video from Google Drive</h3>
+      <video controls preload="metadata" poster="">
+        <source src="https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_ID" type="video/mp4" />
+        Sorry, your browse
